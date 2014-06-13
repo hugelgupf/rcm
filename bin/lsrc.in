@@ -108,7 +108,6 @@ show_file() {
   local dotfiles_subdir="$4"
   local dotted=$5
   local symlink_dirs_file_globs="$6"
-  local mk_dirs_file_globs="$7"
   local dest_file="$(build_path "$dest_dir" "$file" $dotted)"
   local src_file="$(file_join "$dotfiles_subdir" "$file")"
   local abs_src_file="$(file_join "$dotfiles_dir" "$src_file")"
@@ -145,7 +144,7 @@ handle_file() {
   elif is_excluded "$file" "$exclude_file_globs" "$include_file_globs"; then
     $VERBOSE "skipping excluded file $file"
   elif [ -d "$file" ] && is_excluded $file "$symlink_dirs_file_globs" "$mk_dirs_file_globs"; then
-    show_file "$file" "$dest_dir" "$dotfiles_dir" "$dotfiles_subdir" $dotted "$symlink_dirs_file_globs"
+    show_file "$file" "$dest_dir" "$dotfiles_dir" "$dotfiles_subdir" $dotted
   elif [ -d "$file" ]; then
     show_dir "$file" "$dest_dir" "$dotfiles_dir" "$dotfiles_subdir" $dotted "$exclude_file_globs" "$include_file_globs" "$symlink_dirs_file_globs" "$mk_dirs_file_globs"
   else
