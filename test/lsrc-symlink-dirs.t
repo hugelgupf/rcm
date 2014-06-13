@@ -12,3 +12,6 @@ Overrides SYMLINK_DIRS with -s
 
   $ lsrc -s eggplant_firetruck
   /*/.eggplant_firetruck/lampshape/bottle:/*/.dotfiles/eggplant_firetruck/lampshape/bottle (glob)
+
+  $ lsrc -S eggplant_firetruck -s eggplant_firetruck
+  /*/.eggplant_firetruck/lampshape/bottle:/*/.dotfiles/eggplant_firetruck/lampshape/bottle (glob)
