@@ -18,6 +18,6 @@ Overrides SYMLINK_DIRS with -s
 
   $ mkrc -vs .eggplant_firetruck
   Moving...
-  '/*/.eggplant_firetruck/lampshape/bottle' -> '/*/.dotfiles/eggplant_firetruck/lampshape/bottle' (glob)
+  '/*/.eggplant_firetruck' -> '/*/.dotfiles/eggplant_firetruck' (glob)
   Linking...
   '/*/.dotfiles/eggplant_firetruck/lampshape/bottle' -> '/*/.eggplant_firetruck/lampshape/bottle' (glob)
